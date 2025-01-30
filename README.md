@@ -1,6 +1,6 @@
 # Amsterdam Dance Events Data Pipeline
 
-<img src="./assets/ade_logo" alt="ADE Logo" >
+<img src="./assets/ade_logo.png" alt="ADE Logo" >
 
 A robust data engineering project to collect, process, and analyze historical event data from the Amsterdam Dance Event (ADE) - Europe's premier electronic music festival.
 
@@ -111,7 +111,7 @@ Rules = [
 
 ### Power BI Dashboard Features:
 
-
+<img src="./assets/ade_event_data_dq_pbi.png" alt="ADE PBI" >
 
 ---
 
