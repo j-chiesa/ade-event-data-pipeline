@@ -18,11 +18,10 @@ This project constructs a high-quality historical dataset from ADE events throug
 ## Key Features
 
 - Selenium-based web scraper with anti-blocking mechanisms
-- Advanced data cleansing with PySpark transformations
+- Data cleansing with PySpark transformations in AWS Glue
 - AWS Glue Data Quality Rulesets for validation
 - Power BI analytics dashboard for quality monitoring
 - AWS S3 cloud storage integration
-- Temporal analysis capabilities through event timelines
 
 ---
 
