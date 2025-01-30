@@ -1,6 +1,6 @@
 # Amsterdam Dance Events (ADE) Historical Data Pipeline
 
-&#x20;&#x20;
+<img src="./assets/ade_logo.png" alt="ADE Logo" >
 
 A robust data engineering project to collect, process, and analyze historical event data from the Amsterdam Dance Event (ADE) - Europe's premier electronic music festival.
 
