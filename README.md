@@ -57,12 +57,21 @@ This project constructs a high-quality historical dataset from ADE events throug
 
 ```python
 Rules = [
-    ColumnValues "Latitude" between 52.28-52.50,
-    ColumnValues "Longitude" between 4.63-5.08,
-    PricePresale >= 0,
-    Capacity > 0,
-    EventDurationMin >= 0,
-    Edition >= 2005
+    # Validate latitude and longitude is within valid global range
+    ColumnValues "Latitude" between -90 and 90 where "Latitude is not null",
+    ColumnValues "Longitude" between -180 and 180 where "Longitude is not null",
+    # Ensure prices are non-negative
+    ColumnValues "PricePresale" >= 0 where "PricePresale is not null",
+    ColumnValues "PriceDoor" >= 0 where "PriceDoor is not null",
+    # Capacity must be a positive integer
+    ColumnValues "Capacity" > 0 where "Capacity is not null",
+    # Event duration must be non-negative
+    ColumnValues "EventDurationMin" >= 0 where "EventDurationMin is not null",
+    # Edition year must be grater to first edition
+    ColumnValues "Edition" >= 2005,
+    # Validate coordinates are within Amsterdam's metropolitan area
+    ColumnValues "Latitude" between 52.28 and 52.50 where "Latitude is not null",  
+    ColumnValues "Longitude" between 4.63 and 5.08 where "Longitude is not null"
 ]
 ```
 
@@ -70,10 +79,29 @@ Rules = [
 
 ```python
 Rules = [
-    Completeness "EventName" > 99%,
-    Completeness "VenueName" > 95%,
-    Completeness "Latitude" > 90%,
-    ColumnLength "Lineup" > 0
+    # Critical fields must have > 99% completeness
+    Completeness "EventName" > 0.99,
+    Completeness "StartDate" > 0.99,
+    Completeness "EndDate" > 0.99,
+    
+    # Venue and address fields must have > 95% completeness
+    Completeness "VenueName" > 0.95,
+    Completeness "Address" > 0.95,
+    
+    # Coordinates must have > 90% completeness
+    Completeness "Latitude" > 0.9,
+    Completeness "Longitude" > 0.9,
+    
+    # Edition field must have > 99% completeness
+    Completeness "Edition" > 0.99,
+    
+    # At least one price field (Presale or Door) must be present
+    Completeness "PricePresale" > 0.98,
+    Completeness "PriceDoor" > 0.98,
+    
+    # Lineup and Genre arrays must not be empty
+    ColumnLength "Lineup" > 0,
+    ColumnLength "Genre" > 0
 ]
 ```
 
@@ -83,12 +111,7 @@ Rules = [
 
 ### Power BI Dashboard Features:
 
-- **Data Quality Scorecards**
-- **Temporal Coverage Analysis**
-- **Venue Capacity Distribution**
-- **Price Evolution Trends**
-- **Genre Popularity Heatmaps**
-- **Data Completeness Reports**
+
 
 ---
 
