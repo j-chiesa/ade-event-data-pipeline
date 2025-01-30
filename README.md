@@ -1,4 +1,4 @@
-# Amsterdam Dance Event (ADE) Historical Data Pipeline
+# Amsterdam Dance Events (ADE) Historical Data Pipeline
 
 &#x20;&#x20;
 
