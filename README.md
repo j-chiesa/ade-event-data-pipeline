@@ -4,7 +4,7 @@
 
 A robust data engineering project to collect, process, and analyze historical event data from the Amsterdam Dance Event (ADE) - Europe's premier electronic music festival.
 
-## 📖 Project Overview
+## Project Overview
 
 This project constructs a high-quality historical dataset from ADE events through two automated ETL pipelines:
 
@@ -15,18 +15,18 @@ This project constructs a high-quality historical dataset from ADE events throug
 **Target Coverage**: 2005-2024 (Continually expanding)\
 **Status**: MVP Released - Actively Developed
 
-## ✨ Key Features
+## Key Features
 
-- 🕸️ Selenium-based web scraper with anti-blocking mechanisms
-- 🧹 Advanced data cleansing with PySpark transformations
-- ✅ AWS Glue Data Quality Rulesets for validation
-- 📊 Power BI analytics dashboard for quality monitoring
-- ☁️ AWS S3 cloud storage integration
-- 📆 Temporal analysis capabilities through event timelines
+- Selenium-based web scraper with anti-blocking mechanisms
+- Advanced data cleansing with PySpark transformations
+- AWS Glue Data Quality Rulesets for validation
+- Power BI analytics dashboard for quality monitoring
+- AWS S3 cloud storage integration
+- Temporal analysis capabilities through event timelines
 
 ---
 
-## ⚙️ ETL Pipeline Architecture
+## ETL Pipeline Architecture
 
 ### Pipeline 1: Data Acquisition
 
@@ -51,7 +51,7 @@ This project constructs a high-quality historical dataset from ADE events throug
 - Type casting and null handling\
   **Output**: Cleaned Parquet files in `s3://ade-data-bucket/ade_event_data_clean/`
 
-## 🔍 Data Quality Assurance
+## Data Quality Assurance
 
 ### Ruleset 1: Accuracy Checks
 
@@ -107,7 +107,7 @@ Rules = [
 
 **Validation**: Automated AWS Glue Data Quality checks with results visualized in Power BI
 
-## 📈 Analytics & Visualization
+## Analytics & Visualization
 
 ### Power BI Dashboard Features:
 
