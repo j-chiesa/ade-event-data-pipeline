@@ -28,18 +28,18 @@ This project constructs a high-quality historical dataset from ADE events throug
 
 ## ETL Pipeline Architecture
 
-### Pipeline 1: Data Acquisition
+### Pipeline 1: Data Acquisition (Python)
 
 #### Core components:
 
-- Headless Firefox browser with Selenium
+- Firefox browser with Selenium
 - BeautifulSoup HTML parsing
 - Cookie consent handling
 - AWS S3 integration (s3://ade-data-bucket)
 - Error-resistant scraping logic\
   **Output**: Raw CSV files stored in `s3://ade-data-bucket/ade_event_data_raw/`
 
-### Pipeline 2: Data Transformation
+### Pipeline 2: Data Transformation (PySpark)
 
 #### Key transformations:
 
