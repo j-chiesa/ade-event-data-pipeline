@@ -1,4 +1,4 @@
-# Amsterdam Dance Events (ADE) Historical Data Pipeline
+# Amsterdam Dance Events Data Pipeline
 
 <img src="./assets/ade_logo.png" alt="ADE Logo" >
 
