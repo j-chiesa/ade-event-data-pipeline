@@ -1,0 +1,25 @@
+Rules = [
+    # Critical fields must have > 99% completeness
+    Completeness "EventName" > 0.99,
+    Completeness "StartDate" > 0.99,
+    Completeness "EndDate" > 0.99,
+    
+    # Venue and address fields must have > 95% completeness
+    Completeness "VenueName" > 0.95,
+    Completeness "Address" > 0.95,
+    
+    # Coordinates must have > 90% completeness
+    Completeness "Latitude" > 0.9,
+    Completeness "Longitude" > 0.9,
+    
+    # Edition field must have > 99% completeness
+    Completeness "Edition" > 0.99,
+    
+    # At least one price field (Presale or Door) must be present
+    Completeness "PricePresale" > 0.98,
+    Completeness "PriceDoor" > 0.98,
+    
+    # Lineup and Genre arrays must not be empty
+    ColumnLength "Lineup" > 0,
+    ColumnLength "Genre" > 0
+]

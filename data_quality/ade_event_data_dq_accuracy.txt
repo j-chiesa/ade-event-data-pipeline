@@ -1,0 +1,17 @@
+Rules = [
+    # Validate latitude and longitude is within valid global range
+    ColumnValues "Latitude" between -90 and 90 where "Latitude is not null",
+    ColumnValues "Longitude" between -180 and 180 where "Longitude is not null",
+    # Ensure prices are non-negative
+    ColumnValues "PricePresale" >= 0 where "PricePresale is not null",
+    ColumnValues "PriceDoor" >= 0 where "PriceDoor is not null",
+    # Capacity must be a positive integer
+    ColumnValues "Capacity" > 0 where "Capacity is not null",
+    # Event duration must be non-negative
+    ColumnValues "EventDurationMin" >= 0 where "EventDurationMin is not null",
+    # Edition year must be grater to first edition
+    ColumnValues "Edition" >= 2005,
+    # Validate coordinates are within Amsterdam's metropolitan area
+    ColumnValues "Latitude" between 52.28 and 52.50 where "Latitude is not null",  
+    ColumnValues "Longitude" between 4.63 and 5.08 where "Longitude is not null"
+]
