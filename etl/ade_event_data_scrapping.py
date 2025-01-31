@@ -14,8 +14,8 @@ import boto3
 # AWS S3 Configuration
 AWS_S3_BUCKET_NAME = 'ade-data-bucket'
 AWS_REGION = 'eu-north-1'
-AWS_ACCESS_KEY = 'AKIAWPPO6UKMRRHGIS5A'
-AWS_SECRET_KEY = 'kNFGw8v1xcdN4KSoX75rz43g8CJetrJXjpL3vywn'
+AWS_ACCESS_KEY = 'your_aws_access_key'
+AWS_SECRET_KEY = 'your_aws_secret_key'
 
 def initialize_driver():
     """
